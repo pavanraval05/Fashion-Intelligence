@@ -16,6 +16,8 @@ class TestOptions(BaseOptions):
                                  help='which epoch to load? set to latest to use latest cached model')
         self.parser.add_argument(
             '--how_many', type=int, default=1000, help='how many test images to run')
+        self.parser.add_argument('--serial_batches', action='store_false',
+                                 help='if true, takes images in order to make batches, otherwise takes them randomly')
         self.parser.add_argument('--cluster_path', type=str, default='features_clustered_010.npy',
                                  help='the path for clustered results of encoded features')
         self.parser.add_argument('--use_encoded_image', action='store_true',
