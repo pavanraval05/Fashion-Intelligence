@@ -55,7 +55,7 @@ class BaseOptions():
         self.parser.add_argument('--no_flip', action='store_true',
                                  help='if specified, do not flip the images for data argumentation')
         self.parser.add_argument(
-            '--nThreads', default=2, type=int, help='# threads for loading data')
+            '--nThreads', default=1, type=int, help='# threads for loading data')
         self.parser.add_argument('--max_dataset_size', type=int, default=float(
             "inf"), help='Maximum number of samples allowed per dataset. If the dataset directory contains more than max_dataset_size, only a subset is loaded.')
 
