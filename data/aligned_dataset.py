@@ -200,7 +200,7 @@ class AlignedDataset(BaseDataset):
         P_tensor = pose_map
 
         input_dict = {'label': A_tensor, 'image': B_tensor,
-                      'path': A_path, 'name': A_path.split("/")[-1].split("\\")[1],
+                      'path': A_path, 'name': A_path.split("/")[-1],
                       'edge': E_tensor, 'color': C_tensor, 'mask': M_tensor, 'colormask': MC_tensor, 'pose': P_tensor
                       }
 
