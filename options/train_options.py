@@ -25,6 +25,8 @@ class TrainOptions(BaseOptions):
                                  help='which epoch to load? set to latest to use latest cached model')
         self.parser.add_argument(
             '--phase', type=str, default='test', help='train, val, test, etc')
+        self.parser.add_argument('--serial_batches', action='store_true',
+                                 help='if true, takes images in order to make batches, otherwise takes them randomly')
         self.parser.add_argument(
             '--niter', type=int, default=100, help='# of iter at starting learning rate')
         self.parser.add_argument('--niter_decay', type=int, default=100,
