@@ -81,7 +81,7 @@ class general_pose_model(object):
 
         return points
 
-def generate_pose_keypoints(img_file):
+def generate_pose_keypoints(img_file, pose_file):
 
     modelpath = 'pose'
     pose_model = general_pose_model(modelpath)
@@ -94,7 +94,7 @@ def generate_pose_keypoints(img_file):
                             ]
                 }
 
-    pose_keypoints_path = img_file.replace('.jpg', '_keypoints.json')
+    pose_keypoints_path = pose_file
 
     json_object = json.dumps(pose_data, indent = 4) 
   
