@@ -1,3 +1,10 @@
+# Inference using colab
+[colab-badge]: <https://colab.research.google.com/assets/colab-badge.svg>
+
+[![Open In Colab][colab-badge]](https://colab.research.google.com/github/levindabhi/ACGPN/blob/master/ACGPN_and_SieveNet.ipynb)
+
+# Original README
+
 ## Disclaimer
 This is just a slightly modified repository of [DeepFashion_Try_On (ACGPN)](https://github.com/switchablenorms/DeepFashion_Try_On) for inference and visualization. Please refer to the original repository for details.
 
