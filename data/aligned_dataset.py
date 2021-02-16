@@ -172,7 +172,7 @@ class AlignedDataset(BaseDataset):
         E_tensor = transform_A(E)
 
         # Pose
-        pose_name = B_path.replace('.jpg', '_keypoints.json').replace(
+        pose_name = B_path.replace('.jpg', '_keypoints.json').replace('.png', '_keypoints.json').replace(
             'test_img', 'test_pose')
         with open(osp.join(pose_name), 'r') as f:
             pose_label = json.load(f)
