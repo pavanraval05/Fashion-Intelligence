@@ -1,4 +1,5 @@
 # Inference using colab
+
 [colab-badge]: <https://colab.research.google.com/assets/colab-badge.svg>
 
 [![Open In Colab][colab-badge]](https://colab.research.google.com/github/levindabhi/ACGPN/blob/master/ACGPN_and_SieveNet.ipynb)
@@ -9,6 +10,7 @@
 This is just a slightly modified repository of [DeepFashion_Try_On (ACGPN)](https://github.com/switchablenorms/DeepFashion_Try_On) for inference and visualization. Please refer to the original repository for details.
 
 # Towards Photo-Realistic Virtual Try-On by Adaptively Generating↔Preserving Image Content, CVPR'20.
+
 Official code for CVPR 2020 paper 'Towards Photo-Realistic Virtual Try-On by Adaptively Generating↔Preserving Image Content'.
 We rearrange the VITON dataset for easy access.
 
@@ -20,21 +22,26 @@ We rearrange the VITON dataset for easy access.
 [[Paper]](https://arxiv.org/abs/2003.05863)
 
 ## Inference
+
 1) Download the test dataset and unzip
 2) Download the checkpoints and unzip
 3) Then run - ```python test.py```
 
 **Dataset Partition** We present a criterion to introduce the difficulty of try-on for a certain reference image.
 ## The specific key points we choose to evaluate the try-on difficulty
+
 ![image](https://github.com/switchablenorms/DeepFashion_Try_On/blob/master/images/criterion.png)
 
 We use the pose map to calculate the difficulty level of try-on. The key motivation behind this is the more complex the occlusions and layouts are in the clothing area, the harder it will be. And the formula is given,
+
 ## The formula to compute the difficulty of try-onreference image
 
 ![image](https://github.com/switchablenorms/DeepFashion_Try_On/blob/master/images/formula.png)
 
 where t is a certain key point, Mp' is the set of key point we take into consideration, and N is the size of the set. 
+
 ## Segmentation Label
+
 ```bash
 0 -> Background
 1 -> Hair
